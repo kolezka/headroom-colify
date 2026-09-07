@@ -4,8 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    ports:
-      - "${HEADROOM_BIND_HOST:-127.0.0.1}:8787:8787"
     environment:
       - SERVICE_FQDN_HEADROOM_8787
       - HEADROOM_PROXY_TOKEN=${SERVICE_HEX_64_HEADROOMPROXYTOKEN}
